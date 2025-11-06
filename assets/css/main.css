@@ -83,3 +83,42 @@
     color: #333;
   }
   
+  .bio-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.bio-text {
+    flex: 2;
+}
+
+.bio-image {
+    flex: 1;
+    text-align: center;
+}
+
+.profile-photo {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 50%;
+}
+
+.social-links {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-links img {
+    width: 28px;
+    height: 28px;
+    transition: opacity 0.2s ease;
+}
+
+.social-links img:hover {
+    opacity: 0.7;
+}
+
