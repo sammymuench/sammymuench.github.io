@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interests and hobbies of Sammy Muench - Ultimate Frisbee, running, and more.">
+    <title>Interests | Sammy Muench</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <a href="index.html" class="nav-logo">Sammy Muench</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Overview</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="interests.html" class="active">Interests</a></li>
+                <li><a href="assets/sammy muench cv-3.pdf" target="_blank">CV</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="page-content">
+        <div class="container">
+            <header class="page-header">
+                <h1>Interests</h1>
+                <p>Beyond the algorithms and data.</p>
+            </header>
+
+            <div class="interests-layout">
+                <div class="interests-images">
+                    <div class="interest-item">
+                        <img src="assets/images/frisbee.jpg" alt="Ultimate Frisbee">
+                        <span class="interest-label">Ultimate Frisbee</span>
+                    </div>
+                    <div class="interest-item">
+                        <img src="assets/images/running.jpg" alt="Running">
+                        <span class="interest-label">Running</span>
+                    </div>
+                </div>
+                <p class="interests-text">
+                    I also love improv comedy, playing bass, and watching the New York Giants (mostly lose).
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Mobile navigation toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

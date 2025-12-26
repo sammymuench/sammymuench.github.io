@@ -1,46 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact | Sammy Muench</title>
-  <link rel="stylesheet" href="assets/css/reset.css">
-  <link rel="stylesheet" href="assets/css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with Sammy Muench - Data Scientist.">
+    <title>Contact | Sammy Muench</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <header>
-    <div class="container">
-      <a href="index.html">
-        <img src="assets/images/logo.svg" alt="Sammy Muench logo" class="logo">
-      </a>
-      <nav>
-        <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <a href="index.html" class="nav-logo">Sammy Muench</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Overview</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="interests.html">Interests</a></li>
+                <li><a href="assets/sammy muench cv-3.pdf" target="_blank">CV</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
 
-  <main class="container">
-    <h2>Get in Touch</h2>
-    <div class="contact-info">
-      <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">yourprofile</a></p>
-      <!-- If you want a form, swap the above for a real form or a Formspree action -->
-    </div>
-  </main>
+    <!-- Page Content -->
+    <main class="page-content">
+        <div class="container">
+            <div class="contact-content">
+                <h1>Get in Touch</h1>
+                <p class="contact-intro">
+                    Want to chat about research, collaborate on a project, or just talk sports and data? I'd love to
+                    hear from you.
+                </p>
 
-  <footer>
-    <div class="container">
-      <p>&copy; <span id="year">2025</span> Sammy Muench</p>
-      <p><a href="mailto:you@example.com">you@example.com</a></p>
-    </div>
-  </footer>
+                <div class="contact-links">
+                    <a href="mailto:fsmuench@gmail.com" class="contact-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="20" height="16" x="2" y="4" rx="2" />
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                        </svg>
+                        fsmuench@gmail.com
+                    </a>
 
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/analytics.js"></script>
+                    <a href="https://www.linkedin.com/in/sammy-muench/" target="_blank" class="contact-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect width="4" height="12" x="2" y="9" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                        LinkedIn
+                    </a>
+
+                    <a href="https://github.com/sammymuench" target="_blank" class="contact-link contact-link-last">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                            <path d="M9 18c-4.51 2-5-2-7-2" />
+                        </svg>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Mobile navigation toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
+
 </html>

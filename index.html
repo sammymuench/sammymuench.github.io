@@ -1,66 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home | Sammy Muench</title>
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Sammy Muench - Data Scientist specializing in predictive modeling, machine learning, and AI.">
+    <title>Sammy Muench | Data Scientist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <header>
+    <!-- Navigation -->
+    <nav class="nav">
         <div class="container">
-            <a href="index.html">
-                <img src="assets/images/logo.svg" alt="Sammy Muench logo" class="logo">
-            </a>
-            <nav>
-                <ul class="nav-list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+            <a href="index.html" class="nav-logo">Sammy Muench</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Overview</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="interests.html">Interests</a></li>
+                <li><a href="assets/sammy muench cv-3.pdf" target="_blank">CV</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-    </header>
+    </nav>
 
-    <main class="container">
-        <section class="intro">
-            <h1>Hello, I'm Sammy Muench</h1>
-            <p> I am a recent graduate of Tufts University currently working as a Quantitative Analyst at StoneX Retail. My academic interests include predictive modeling, machine learning, and artificial intelligence, with a focus on their applications in economics, social impact, and sports analytics. I am passionate about harnessing the power of data to drive informed decision-making and create positive change in these fields.
-                 Welcome to my portfolio!</p>
-        </section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-wrapper">
+                <div class="hero-content">
+                    <h1>Hello!</h1>
+                    <p class="hero-intro">
+                        I recently graduated from Tufts University with a B.S. in Data Science. I am currently working
+                        as a Quantitative Analyst at StoneX Retail. My interests include predictive modeling, machine
+                        learning, and artificial intelligence.
+                    </p>
+                    <p class="hero-intro">
+                        I have worked on causal inference, ML, and AI projects with applications ranging from predicting
+                        opioid overdoses to inform policy interventions, to optimizing FX currency hedging strategies in
+                        finance, to predicting which NFL rookies will succeed using natural language processing.
+                    </p>
+                    <p class="hero-intro">
+                        I pride myself on my ability to apply my ML and AI experience across the fields I am passionate
+                        about. I am deeply interested in exploring new techniques to support informed decision-making
+                        and create positive change in these areas.
+                    </p>
+                    <p class="hero-intro">
+                        Welcome to my portfolio!
+                    </p>
+                    <div class="hero-links">
+                        <a href="https://www.linkedin.com/in/sammy-muench/" target="_blank" class="btn">LinkedIn →</a>
+                        <a href="https://github.com/sammymuench" target="_blank" class="btn btn-outline">GitHub →</a>
+                        <a href="assets/sammy muench cv-3.pdf" target="_blank" class="btn btn-outline">View CV →</a>
+                    </div>
+                </div>
+                <div class="hero-portrait">
+                    <div class="portrait-placeholder">
+                        <img src="assets/images/portrait.png" alt="Portrait">
 
-        <!-- New Bio Section -->
-        <section class="bio-section">
-
-
-            <div class="bio-image">
-                <img src="assets/images/profile.jpg" alt="Portrait of Sammy Muench" class="profile-photo">
-
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/sammy-muench/" target="_blank" aria-label="LinkedIn">
-                        <img src="assets/icons/linkedin.svg" alt="LinkedIn icon">
-                    </a>
-                    <a href="https://github.com/sammymuench" target="_blank" aria-label="GitHub">
-                        <img src="assets/icons/github.svg" alt="GitHub icon">
-                    </a>
-                    <a href="https://scholar.google.com/citations?user=yourid" target="_blank" aria-label="Google Scholar">
-                        <img src="images/scholar.png">
-                    </a>
+                    </div>
                 </div>
             </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; <span id="year">2025</span> Sammy Muench</p>
-            <p><a href="mailto:you@example.com">you@example.com</a></p>
         </div>
-    </footer>
+    </section>
 
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/analytics.js"></script>
+    <script>
+        // Mobile navigation toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
+
 </html>

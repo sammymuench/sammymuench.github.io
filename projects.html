@@ -1,55 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projects by Sammy Muench - Research in machine learning, AI, and data science.">
     <title>Projects | Sammy Muench</title>
-    <link rel="stylesheet" href="assets/css/reset.css"> <!-- Linking to the CSS reset file -->
-    <link rel="stylesheet" href="assets/css/main.css"> <!-- Linking to the main CSS file -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <header>
+    <!-- Navigation -->
+    <nav class="nav">
         <div class="container">
-            <a href="index.html">
-                <img src="assets/images/logo.svg" alt="Sammy Muench logo" class="logo"> <!-- Logo image -->
-            </a>
-            <nav>
-                <ul class="nav-list">
-                    <li><a href="index.html">Home</a></li> <!-- Navigation link to the home page -->
-                    <li><a href="about.html">About</a></li> <!-- Navigation link to the about page -->
-                    <li><a href="projects.html">Projects</a></li> <!-- Navigation link to the projects page -->
-                    <li><a href="contact.html">Contact</a></li> <!-- Navigation link to the contact page -->
-                </ul>
-            </nav>
+            <a href="index.html" class="nav-logo">Sammy Muench</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Overview</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="interests.html">Interests</a></li>
+                <li><a href="assets/sammy muench cv-3.pdf" target="_blank">CV</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-    </header>
+    </nav>
 
-    <main class="container">
-        <h2>My Projects</h2>
+    <!-- Page Content -->
+    <main class="page-content">
+        <div class="container">
+            <header class="page-header">
+                <h1>Projects</h1>
+                <p>Research and applied work in machine learning and AI.</p>
+            </header>
 
-        <div class="project">
-            <h3>Project One</h3>
-            <img src="assets/images/projects/proj1.png" alt="Screenshot of Project One"> <!-- Image for Project One -->
-            <p>Short description of what this project does and which technologies you used.</p> <!-- Description of Project One -->
-            <p><a href="https://github.com/sammymuench/project-one" target="_blank">View on GitHub →</a></p> <!-- Link to GitHub repository for Project One -->
-        </div>
+            <div class="projects-grid">
+                <!-- Project 1: ICML Paper -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/Decisionawaretraining.png" alt="Decision-aware training visualization">
+                    </div>
+                    <div class="project-content">
+                        <h3>Decision-aware Training of Spatiotemporal Forecasting Models</h3>
+                        <p class="project-meta">
+                            Kyle Heuton, F. Samuel Muench, Shikhar Shrestha, Thomas J. Stopka, Michael C. Hughes<br>
+                            <strong>Accepted and Presented at ICML 2025</strong>
+                        </p>
+                        <p class="project-description">
+                            A novel approach to training spatiotemporal forecasting models that optimizes for downstream
+                            decision-making tasks, specifically selecting a top K subset of sites for intervention.
+                        </p>
+                        <a href="https://arxiv.org/abs/2503.05622" target="_blank" class="project-link">Read on arXiv
+                            →</a>
+                    </div>
+                </article>
 
-        <div class="project">
-            <h3>Project Two</h3>
-            <img src="assets/images/projects/proj2.png" alt="Screenshot of Project Two"> <!-- Image for Project Two -->
-            <p>Short description of what this project does and which technologies you used.</p> <!-- Description of Project Two -->
-            <p><a href="https://github.com/sammymuench/project-two" target="_blank">View on GitHub →</a></p> <!-- Link to GitHub repository for Project Two -->
+                <!-- Project 2: NFL NLP -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/nfl.png" alt="NLPhrases NFL analysis">
+                    </div>
+                    <div class="project-content">
+                        <h3>The Utility of NLPhrases: Using NLP to Predict NFL Rookie Success</h3>
+                        <p class="project-meta">
+                            <strong>Accepted and Presented at Carnegie Mellon Sports Analytics Conference 2025</strong>
+                        </p>
+                        <p class="project-description">
+                            An innovative application of natural language processing to predict which NFL rookies will
+                            succeed in the league.
+                        </p>
+                        <a href="#" class="project-link">View Project →</a>
+                    </div>
+                </article>
+            </div>
         </div>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; <span id="year">2025</span> Sammy Muench</p> <!-- Copyright information -->
-            <p><a href="mailto:you@example.com">you@example.com</a></p> <!-- Email contact information -->
-        </div>
-    </footer>
+    <script>
+        // Mobile navigation toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
 
-    <script src="assets/js/main.js"></script> <!-- Linking to the main JavaScript file -->
-    <script src="assets/js/analytics.js"></script> <!-- Linking to the analytics JavaScript file -->
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
+
 </html>
