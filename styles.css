@@ -573,3 +573,6 @@ p {
         justify-content: center;
     }
 }
+.projects-grid > .project-card:last-child {
+    grid-column: 1 / -1;
+  }
